@@ -1,0 +1,116 @@
+/* Stats Bar */
+.statsBar { background: linear-gradient(135deg, #1a6b3c, #0f4225); padding: 48px 0; }
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+.statItem { padding: 16px; border-right: 1px solid rgba(255,255,255,0.15); }
+.statItem:last-child { border-right: none; }
+.statValue { font-size: 2.4rem; font-weight: 800; color: #e8c97a; font-family: 'Inter', sans-serif; line-height: 1; margin-bottom: 8px; }
+.statLabel { font-size: 0.82rem; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 500; }
+
+/* About */
+.aboutGrid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: center; }
+.aboutImage { position: relative; border-radius: 20px; overflow: visible; }
+.aboutImage img { width: 100%; border-radius: 20px; box-shadow: 0 24px 64px rgba(0,0,0,0.2); }
+.aboutBadge { position: absolute; bottom: -24px; right: -24px; background: #1a6b3c; color: #fff; padding: 20px 24px; border-radius: 16px; text-align: center; box-shadow: 0 8px 32px rgba(26,107,60,0.4); }
+.badgeYear { display: block; font-size: 1.8rem; font-weight: 800; font-family: 'Inter', sans-serif; color: #e8c97a; }
+.badgeText { font-size: 0.75rem; letter-spacing: 1px; opacity: 0.9; }
+.aboutText { color: #5a6b58; line-height: 1.8; margin-bottom: 32px; font-size: 1.02rem; }
+.mvGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 32px; }
+.mvCard { background: #f8f9f7; border-radius: 16px; padding: 20px; border-left: 4px solid #1a6b3c; }
+.mvIcon { font-size: 1.5rem; margin-bottom: 8px; }
+.mvCard h4 { font-size: 0.9rem; font-weight: 700; color: #1a6b3c; margin-bottom: 8px; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
+.mvCard p { font-size: 0.85rem; color: #5a6b58; line-height: 1.6; }
+.aboutContent { padding-left: 16px; }
+
+/* Programs */
+.programsSection { background: #f8f9f7; }
+.programCard { display: flex; flex-direction: column; }
+.programImg { width: 100%; height: 200px; object-fit: cover; }
+.programIconWrap { height: 160px; background: linear-gradient(135deg, #1a6b3c15, #c9a84c15); display: flex; align-items: center; justify-content: center; }
+.programIcon { font-size: 3.5rem; }
+.programBody { padding: 24px; flex: 1; }
+.programTitle { font-size: 1.1rem; font-weight: 700; color: #111c10; margin-bottom: 12px; font-family: 'Playfair Display', serif; }
+.programDesc { font-size: 0.88rem; color: #5a6b58; line-height: 1.7; }
+.programFooter { padding: 0 24px 24px; }
+
+/* CEO */
+.ceoSection { background: #fff; }
+.ceoGrid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: center; }
+.ceoImageWrap { position: relative; }
+.ceoImage { width: 100%; border-radius: 24px; box-shadow: 0 24px 64px rgba(0,0,0,0.15); }
+.ceoQuote { position: absolute; bottom: -20px; left: 20px; right: 20px; background: #1a6b3c; color: #fff; padding: 16px 20px; border-radius: 12px; font-style: italic; font-size: 0.88rem; line-height: 1.5; box-shadow: 0 8px 24px rgba(26,107,60,0.3); }
+.ceoRole { color: #c9a84c; font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; }
+.ceoBio { color: #5a6b58; line-height: 1.8; margin-bottom: 24px; }
+.ceoAchievements { display: flex; flex-direction: column; gap: 10px; }
+.achievement { display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; color: #2c3b2a; }
+.checkIcon { color: #1a6b3c; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+/* Team */
+.teamCard { text-align: center; }
+.teamImg { width: 100%; height: 220px; object-fit: cover; object-position: top; }
+.teamBody { padding: 20px; }
+.teamName { font-size: 1rem; font-weight: 700; color: #111c10; margin-bottom: 4px; font-family: 'Playfair Display', serif; }
+.teamTitle { font-size: 0.8rem; color: #1a6b3c; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.teamBio { font-size: 0.82rem; color: #5a6b58; line-height: 1.6; }
+
+/* Donate */
+.donateSection { background: linear-gradient(135deg, #0f4225 0%, #1a6b3c 50%, #0f4225 100%); }
+.donateGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.partnerList { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.partnerItem { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.85); font-size: 0.88rem; }
+.partnerItem span { color: #c9a84c; font-weight: 700; }
+.donateCard { background: #fff; border-radius: 24px; padding: 36px; box-shadow: 0 24px 64px rgba(0,0,0,0.2); }
+.donateCardTitle { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #111c10; margin-bottom: 6px; }
+.donateCardSub { color: #5a6b58; font-size: 0.88rem; margin-bottom: 24px; }
+.amountGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }
+.amountBtn { padding: 10px; border: 2px solid #e2e6e0; border-radius: 10px; background: #fff; color: #2c3b2a; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
+.amountBtn:hover { border-color: #1a6b3c; color: #1a6b3c; }
+.amountActive { border-color: #1a6b3c !important; background: #1a6b3c !important; color: #fff !important; }
+.donateFullBtn { width: 100%; justify-content: center; font-size: 1rem !important; padding: 16px !important; }
+
+/* Gallery */
+.galleryTabs { display: flex; gap: 10px; justify-content: center; margin-bottom: 32px; flex-wrap: wrap; }
+.galleryTab { padding: 8px 20px; border-radius: 50px; border: 2px solid #e2e6e0; background: #fff; color: #5a6b58; font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; text-transform: capitalize; }
+.galleryTab:hover { border-color: #1a6b3c; color: #1a6b3c; }
+.galleryTabActive { border-color: #1a6b3c !important; background: #1a6b3c !important; color: #fff !important; }
+.galleryGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.galleryItem { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; }
+.galleryItem img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.galleryItem:hover img { transform: scale(1.08); }
+.galleryOverlay { position: absolute; inset: 0; background: linear-gradient(transparent, rgba(0,0,0,0.6)); display: flex; align-items: flex-end; padding: 16px; opacity: 0; transition: opacity 0.3s; }
+.galleryItem:hover .galleryOverlay { opacity: 1; }
+.galleryOverlay p { color: #fff; font-size: 0.85rem; font-weight: 600; }
+
+/* Why Partner */
+.partnerSection { background: #f8f9f7; }
+.whyCard { padding: 32px; text-align: center; }
+.whyIcon { font-size: 2.5rem; margin-bottom: 16px; }
+.whyTitle { font-size: 1.05rem; font-weight: 700; color: #111c10; margin-bottom: 12px; font-family: 'Inter', sans-serif; }
+.whyDesc { font-size: 0.88rem; color: #5a6b58; line-height: 1.7; }
+
+/* Contact */
+.contactGrid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start; }
+.contactInfoTitle { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #111c10; margin-bottom: 12px; }
+.contactInfoText { color: #5a6b58; line-height: 1.7; margin-bottom: 32px; }
+.contactItems { display: flex; flex-direction: column; gap: 20px; }
+.contactItem { display: flex; align-items: flex-start; gap: 16px; }
+.contactIcon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+.contactItem strong { display: block; color: #1a6b3c; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+.contactItem p { color: #5a6b58; font-size: 0.9rem; }
+.contactForm { background: #f8f9f7; padding: 40px; border-radius: 20px; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .aboutGrid, .ceoGrid, .donateGrid, .contactGrid { grid-template-columns: 1fr; gap: 40px; }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .statItem { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
+}
+@media (max-width: 768px) {
+  .galleryGrid { grid-template-columns: repeat(2, 1fr); }
+  .aboutBadge, .ceoQuote { position: relative; bottom: auto; right: auto; left: auto; margin-top: 16px; }
+  .mvGrid, .partnerList { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .galleryGrid { grid-template-columns: 1fr; }
+  .amountGrid { grid-template-columns: repeat(2, 1fr); }
+}

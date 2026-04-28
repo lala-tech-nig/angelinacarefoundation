@@ -1,0 +1,18 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a1f0e 0%, #1a6b3c 100%);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.card {
+  background: #fff; border-radius: 24px; padding: 48px 40px;
+  width: 100%; max-width: 420px;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.3);
+  text-align: center;
+}
+.logo { font-size: 3rem; margin-bottom: 12px; }
+.title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #111c10; margin-bottom: 6px; }
+.subtitle { color: #5a6b58; font-size: 0.88rem; margin-bottom: 32px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
+.loginBtn { width: 100%; justify-content: center; margin-top: 8px; }
+.backLink { display: block; margin-top: 24px; color: #9ca89a; font-size: 0.85rem; transition: color 0.2s; }
+.backLink:hover { color: #1a6b3c; }

@@ -1,0 +1,44 @@
+.footer {
+  background: linear-gradient(135deg, #0a1f0e 0%, #0f2f18 50%, #0a1a0c 100%);
+  color: rgba(255,255,255,0.8);
+  padding: 80px 0 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.4fr;
+  gap: 48px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #fff; font-weight: 700; margin-bottom: 12px; }
+.tagline { color: #c9a84c; font-style: italic; margin-bottom: 8px; font-size: 0.9rem; }
+.reg { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
+.socials { display: flex; gap: 10px; }
+.social {
+  width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.7);
+  transition: all 0.2s; text-transform: uppercase;
+}
+.social:hover { border-color: #c9a84c; color: #c9a84c; }
+.colTitle { font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #c9a84c; margin-bottom: 20px; }
+.list { display: flex; flex-direction: column; gap: 10px; }
+.listLink { color: rgba(255,255,255,0.65); font-size: 0.88rem; transition: color 0.2s; cursor: pointer; }
+.listLink:hover { color: #fff; }
+.contactList { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+.contactList li { font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+.donateBtn { padding: 10px 24px !important; font-size: 0.85rem !important; }
+.bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 24px 0; font-size: 0.82rem; color: rgba(255,255,255,0.4);
+}
+.adminLink { color: rgba(255,255,255,0.3); font-size: 0.78rem; transition: color 0.2s; }
+.adminLink:hover { color: rgba(255,255,255,0.7); }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+  .bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
