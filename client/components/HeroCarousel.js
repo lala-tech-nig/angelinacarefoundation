@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
 import styles from './HeroCarousel.module.css';
 
 const FALLBACK_SLIDES = [
@@ -10,9 +11,9 @@ const FALLBACK_SLIDES = [
     description: 'Empowering communities through education, healthcare, and sustainable development programs across Nigeria.',
     image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&q=80',
     ctaText: 'Our Programs',
-    ctaLink: '#programs',
+    ctaLink: '/programs',
     ctaSecondaryText: 'Donate Now',
-    ctaSecondaryLink: '#donate',
+    ctaSecondaryLink: '/donate',
   },
   {
     _id: '2',
@@ -21,9 +22,9 @@ const FALLBACK_SLIDES = [
     description: 'Promoting women inclusion, leadership, entrepreneurship, and youth mentorship for a better tomorrow.',
     image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=1600&q=80',
     ctaText: 'Learn More',
-    ctaLink: '#about',
+    ctaLink: '/about',
     ctaSecondaryText: 'Partner With Us',
-    ctaSecondaryLink: '#contact',
+    ctaSecondaryLink: '/contact',
   },
   {
     _id: '3',
@@ -32,9 +33,9 @@ const FALLBACK_SLIDES = [
     description: 'Organizing free medical checkups, health awareness campaigns, and maternal support for underserved communities.',
     image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1600&q=80',
     ctaText: 'Our Impact',
-    ctaLink: '#stats',
+    ctaLink: '/about',
     ctaSecondaryText: 'Contact Us',
-    ctaSecondaryLink: '#contact',
+    ctaSecondaryLink: '/contact',
   },
 ];
 
@@ -66,7 +67,7 @@ export default function HeroCarousel({ slides: propSlides }) {
           className={`${styles.slide} ${i === current ? styles.active : ''}`}
           style={{ backgroundImage: `url(${slide.image})` }}
         >
-          <div className={styles.overlay} style={{ background: `rgba(5,25,10,${slide.overlay || 0.55})` }} />
+          <div className={styles.overlay} />
         </div>
       ))}
 
@@ -78,8 +79,12 @@ export default function HeroCarousel({ slides: propSlides }) {
             <div className={styles.divider} />
             <p className={styles.desc}>{slides[current].description}</p>
             <div className={styles.actions}>
-              <a href={slides[current].ctaLink} className="btn btn-gold">{slides[current].ctaText}</a>
-              <a href={slides[current].ctaSecondaryLink} className="btn btn-outline">{slides[current].ctaSecondaryText}</a>
+              <Link href={slides[current].ctaLink} className="btn btn-gold btn-lg">
+                {slides[current].ctaText}
+              </Link>
+              <Link href={slides[current].ctaSecondaryLink} className="btn btn-outline btn-lg">
+                {slides[current].ctaSecondaryText}
+              </Link>
             </div>
           </div>
         </div>

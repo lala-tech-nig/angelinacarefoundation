@@ -6,7 +6,8 @@
   "type": "commonjs",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "install": "npm install --legacy-peer-deps"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

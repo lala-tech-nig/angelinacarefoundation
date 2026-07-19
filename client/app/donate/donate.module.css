@@ -1,0 +1,314 @@
+/* ── Donate Grid ── */
+.donateGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── Widget ── */
+.widgetCol {}
+
+.widget {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 44px;
+  box-shadow: 0 8px 64px rgba(26,58,107,0.14);
+  border: 1px solid var(--gray-200);
+  position: sticky;
+  top: 100px;
+}
+
+.widgetHeader { margin-bottom: 28px; }
+
+.widgetTag {
+  display: inline-block;
+  background: var(--gold-pale);
+  color: var(--gold-dark);
+  border: 1px solid rgba(201,168,76,0.25);
+  padding: 5px 16px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.widgetTitle {
+  font-size: 1.7rem;
+  color: var(--blue-dark);
+  margin-bottom: 8px;
+}
+
+.widgetSub {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* ── Presets ── */
+.presets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.preset {
+  padding: 12px 8px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--gray-700);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.preset:hover {
+  border-color: var(--blue-mid);
+  color: var(--blue-mid);
+  background: var(--blue-pale);
+}
+
+.presetActive {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+}
+
+.presetActive:hover {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+  color: var(--white);
+}
+
+/* ── Custom Amount ── */
+.customRow { margin-bottom: 20px; }
+
+.customLabel {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 8px;
+}
+
+/* ── Donor Fields ── */
+.donorFields { margin-bottom: 8px; }
+
+/* ── Donate Button ── */
+.donateBtn {
+  width: 100%;
+  justify-content: center;
+  font-size: 1.05rem !important;
+  padding: 16px !important;
+  border-radius: var(--radius-lg) !important;
+  margin-bottom: 16px;
+}
+
+/* ── Secure Note ── */
+.secureNote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--gray-400);
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+/* ── Bank Transfer ── */
+.bankTransfer {
+  background: var(--off-white);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  border: 1px dashed var(--gray-200);
+}
+
+.bankLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 12px;
+}
+
+.bankDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--gray-600);
+}
+
+.bankDetails strong { color: var(--gray-800); }
+
+/* ── Info Col ── */
+.infoCol {}
+
+.whyGive {}
+
+.whyTitle {
+  font-size: 1.8rem;
+  color: var(--blue-dark);
+  margin-bottom: 8px;
+}
+
+.whyText {
+  color: var(--gray-600);
+  line-height: 1.85;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.trustItems {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.trustItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--off-white);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+}
+
+.trustItem:hover {
+  border-color: var(--blue-mid);
+  background: var(--blue-pale);
+}
+
+.trustIcon { font-size: 1.1rem; flex-shrink: 0; }
+
+/* ── Impact Section ── */
+.impactSection { background: var(--off-white); }
+
+.impactCard {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-200);
+  border-top: 4px solid var(--blue-mid);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.impactCard:hover {
+  border-top-color: var(--gold);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.impactIcon { font-size: 2.8rem; margin-bottom: 12px; }
+
+.impactAmount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--blue);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 12px;
+}
+
+.impactDesc {
+  font-size: 0.88rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.giveBtn { margin-top: auto; }
+
+/* ── Partner Cards ── */
+.partnerCard {
+  padding: 32px;
+  text-align: center;
+  border: 1px solid var(--gray-200);
+  border-bottom: 4px solid var(--blue-mid);
+  transition: all 0.3s ease;
+}
+
+.partnerCard:hover {
+  border-bottom-color: var(--gold);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.partnerIcon { font-size: 2.5rem; margin-bottom: 16px; }
+
+.partnerTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.partnerDesc { font-size: 0.88rem; color: var(--gray-600); line-height: 1.7; }
+
+/* ── Quote Section ── */
+.quoteSection {
+  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+  padding: 96px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.quoteSection::before {
+  content: '"';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20rem;
+  color: rgba(255,255,255,0.04);
+  font-family: 'Playfair Display', serif;
+  line-height: 1;
+}
+
+.quoteBox { position: relative; z-index: 1; }
+
+.quoteText {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--white);
+  max-width: 700px;
+  margin: 0 auto 16px;
+  line-height: 1.4;
+}
+
+.quoteSub {
+  color: var(--gold-light);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .donateGrid { grid-template-columns: 1fr; gap: 48px; }
+  .widget { position: static; }
+}
+
+@media (max-width: 640px) {
+  .presets { grid-template-columns: repeat(2, 1fr); }
+  .widget { padding: 28px 20px; }
+}

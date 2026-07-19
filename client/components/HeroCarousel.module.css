@@ -3,86 +3,92 @@
   height: 100vh;
   min-height: 680px;
   overflow: hidden;
-  background: #0a1f0e;
+  background: var(--blue-dark);
 }
 
+/* ── Slides ── */
 .slide {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 1s ease, transform 6s ease;
-  transform: scale(1.05);
+  transform: scale(1.04);
+  transition: opacity 0.9s ease, transform 6s ease;
 }
+
 .slide.active {
   opacity: 1;
   transform: scale(1);
-  z-index: 1;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  z-index: 2;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 22, 40, 0.78) 0%,
+    rgba(26, 58, 107, 0.65) 50%,
+    rgba(10, 22, 40, 0.55) 100%
+  );
 }
 
+/* ── Content ── */
 .content {
   position: absolute;
   inset: 0;
-  z-index: 10;
   display: flex;
   align-items: center;
+  z-index: 10;
   padding-top: 80px;
 }
 
 .text {
-  max-width: 680px;
-  animation: heroIn 0.9s ease forwards;
+  max-width: 720px;
+  animation: fadeInUp 0.9s ease;
 }
 
-@keyframes heroIn {
-  from { opacity: 0; transform: translateY(40px); }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(32px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .tag {
   display: inline-block;
-  background: rgba(201,168,76,0.2);
-  border: 1px solid rgba(201,168,76,0.5);
-  color: #e8c97a;
-  padding: 6px 18px;
+  background: rgba(201, 168, 76, 0.2);
+  color: var(--gold-light);
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  padding: 7px 20px;
   border-radius: 50px;
   font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  color: #fff;
-  font-weight: 700;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  color: var(--white);
   line-height: 1.1;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   text-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 
 .divider {
-  width: 70px;
-  height: 3px;
-  background: linear-gradient(90deg, #c9a84c, transparent);
-  margin-bottom: 20px;
+  width: 64px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--blue-light));
   border-radius: 2px;
+  margin-bottom: 24px;
 }
 
 .desc {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.85);
-  line-height: 1.7;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.75;
   margin-bottom: 36px;
-  max-width: 560px;
+  max-width: 580px;
 }
 
 .actions {
@@ -91,76 +97,100 @@
   flex-wrap: wrap;
 }
 
-/* Arrows */
+/* ── Arrows ── */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 20;
   background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
   border: 1px solid rgba(255,255,255,0.2);
-  color: #fff;
+  color: var(--white);
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  cursor: pointer;
   font-size: 2rem;
-  line-height: 1;
+  cursor: pointer;
+  transition: all 0.25s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s;
-  backdrop-filter: blur(8px);
+  line-height: 1;
 }
-.arrow:hover { background: rgba(201,168,76,0.4); border-color: #c9a84c; transform: translateY(-50%) scale(1.1); }
+
+.arrow:hover {
+  background: var(--blue-mid);
+  border-color: var(--blue-mid);
+  transform: translateY(-50%) scale(1.08);
+}
+
 .arrowLeft { left: 24px; }
 .arrowRight { right: 24px; }
 
-/* Dots */
+/* ── Dots ── */
 .dots {
   position: absolute;
-  bottom: 40px;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 20;
   display: flex;
   gap: 10px;
+  z-index: 20;
 }
-.dot {
-  width: 10px; height: 10px; border-radius: 50%;
-  background: rgba(255,255,255,0.35); border: none; cursor: pointer;
-  transition: all 0.3s;
-}
-.dotActive { background: #c9a84c; width: 28px; border-radius: 5px; }
 
-/* Scroll indicator */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover { background: rgba(255,255,255,0.65); }
+
+.dotActive {
+  background: var(--gold);
+  width: 28px;
+  border-radius: 4px;
+}
+
+/* ── Scroll Indicator ── */
 .scrollIndicator {
   position: absolute;
-  bottom: 40px;
+  bottom: 32px;
   right: 32px;
-  z-index: 20;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  z-index: 20;
   color: rgba(255,255,255,0.5);
   font-size: 0.7rem;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
+  font-weight: 600;
 }
+
 .scrollLine {
   width: 1px;
   height: 48px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.6), transparent);
-  animation: scrollPulse 1.5s ease infinite;
-}
-@keyframes scrollPulse {
-  0%,100% { opacity: 1; height: 48px; }
-  50% { opacity: 0.3; height: 24px; }
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.4));
+  animation: scrollPulse 2s ease infinite;
 }
 
-@media (max-width: 600px) {
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.2); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
   .arrowLeft, .arrowRight { display: none; }
-  .title { font-size: 2.2rem; }
   .scrollIndicator { display: none; }
+  .text { text-align: center; }
+  .divider { margin: 0 auto 24px; }
+  .actions { justify-content: center; }
 }
