@@ -6,8 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
-    "install": "npm install --legacy-peer-deps"
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "axios": "^1.18.1",
