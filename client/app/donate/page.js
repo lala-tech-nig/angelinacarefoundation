@@ -120,23 +120,27 @@ export default function DonatePage() {
             { display_name: 'Program', variable_name: 'program', value: program || 'General Donation' },
           ],
         },
-        callback: async (response) => {
+        // Paystack requires a plain (non-async) callback function
+        callback: function(response) {
           // 3. Verify payment with our backend
-          try {
-            const verifyRes = await donationAPI.verify(response.reference);
-            if (verifyRes.data.verified) {
+          donationAPI.verify(response.reference)
+            .then(function(verifyRes) {
+              if (verifyRes.data.verified) {
+                setSuccess({ reference: response.reference, amount: finalAmount });
+                toast.success('🎉 Thank you! Your donation was received.');
+              } else {
+                toast.error('Payment could not be verified. Please contact us.');
+              }
+              setLoading(false);
+            })
+            .catch(function() {
+              // Payment may still be valid — Paystack webhook will confirm it
+              toast.success('💛 Thank you! Your payment was received. We will confirm shortly.');
               setSuccess({ reference: response.reference, amount: finalAmount });
-              toast.success('🎉 Thank you! Your donation was received.');
-            } else {
-              toast.error('Payment could not be verified. Please contact us.');
-            }
-          } catch {
-            // Payment may still be valid — Paystack webhook will catch it
-            toast.success('💛 Thank you! Your payment was received. We will confirm shortly.');
-            setSuccess({ reference: response.reference, amount: finalAmount });
-          }
+              setLoading(false);
+            });
         },
-        onClose: () => {
+        onClose: function() {
           toast('Payment window closed. Your donation was not completed.', { icon: 'ℹ️' });
           setLoading(false);
         },
