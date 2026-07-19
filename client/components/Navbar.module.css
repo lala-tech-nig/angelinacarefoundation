@@ -25,35 +25,26 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0;
   text-decoration: none;
 }
 
 .logoIcon {
   flex-shrink: 0;
-  filter: drop-shadow(0 2px 8px rgba(26,58,107,0.3));
 }
 
-.logoName {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.2;
-  transition: color 0.3s ease;
+.logoImg {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: brightness(0) invert(1); /* white on dark hero */
+  transition: filter 0.3s ease;
 }
 
-.logoSub {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--gold-light);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
+.scrolled .logoImg {
+  filter: none; /* full color on white scrolled navbar */
 }
-
-.scrolled .logoName { color: var(--blue); }
-.scrolled .logoSub { color: var(--gold-dark); }
 
 /* ── Links ── */
 .links {

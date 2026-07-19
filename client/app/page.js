@@ -151,7 +151,7 @@ export default function HomePage() {
           <div className={styles.ceoGrid}>
             <div className={styles.ceoImageWrap}>
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+                src="/esther.png"
                 alt="Bamidele Esther Iweriebor"
                 className={styles.ceoImage}
               />

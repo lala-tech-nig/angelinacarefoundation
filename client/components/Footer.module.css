@@ -48,24 +48,15 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
   margin-bottom: 20px;
 }
 
-.logoName {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.2;
-}
-
-.logoSub {
-  font-size: 0.65rem;
-  font-weight: 600;
-  color: var(--gold-light);
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.logoImg {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: brightness(0) invert(1); /* white on dark footer */
 }
 
 .tagline {

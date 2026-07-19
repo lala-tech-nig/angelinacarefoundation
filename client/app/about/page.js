@@ -175,7 +175,7 @@ export default function AboutPage() {
             <div className={styles.ceoImageCol}>
               <div className={styles.ceoImgWrap}>
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&q=80"
+                  src="/esther.png"
                   alt="Bamidele Esther Iweriebor"
                 />
               </div>
@@ -233,7 +233,7 @@ export default function AboutPage() {
               {team.map(m => (
                 <div key={m._id} className={`card ${styles.teamCard}`}>
                   <img
-                    src={m.image || 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400'}
+                    src={m.image || '/esther.png'}
                     alt={m.name}
                     className={styles.teamImg}
                   />

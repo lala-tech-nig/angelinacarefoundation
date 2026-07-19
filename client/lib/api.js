@@ -61,7 +61,7 @@ export const contactAPI = {
 };
 
 export const donationAPI = {
-  create: (data) => api.post('/donations', data),
+  initialize: (data) => api.post('/donations/initialize', data),   // NEW: initialize Paystack payment
   verify: (ref) => api.get(`/donations/verify/${ref}`),
   getDonations: (params) => api.get('/donations', { params }),
 };
